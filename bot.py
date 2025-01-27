@@ -1,5 +1,5 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
-from telegram.ext import Updater, CommandHandler, CallbackContext  # Убедитесь, что этот импорт корректен
+from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters  # Добавьте недостающие импорты
 from config import TELEGRAM_BOT_TOKEN, ADMINS
 from handlers import setup_dispatcher
 
