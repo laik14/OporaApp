@@ -1,7 +1,6 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 from telegram.ext import Updater, CommandHandler, CallbackContext
-
-TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+from config import TELEGRAM_BOT_TOKEN, ADMINS
 
 def start(update: Update, context: CallbackContext) -> None:
     keyboard = [
@@ -15,7 +14,7 @@ def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Выберите опцию:', reply_markup=reply_markup)
 
 def main() -> None:
-    updater = Updater(TOKEN)
+    updater = Updater(TELEGRAM_BOT_TOKEN)
     dispatcher = updater.dispatcher
 
     dispatcher.add_handler(CommandHandler("start", start))
