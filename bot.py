@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
-from telegram.ext import Updater, CommandHandler, CallbackContext
+from telegram.ext import Updater, CommandHandler, CallbackContext  # Убедитесь, что этот импорт корректен
 from config import TELEGRAM_BOT_TOKEN, ADMINS
-from handlers import setup_dispatcher  # Добавьте импорт setup_dispatcher
+from handlers import setup_dispatcher
 
 def start(update: Update, context: CallbackContext) -> None:
     keyboard = [
@@ -18,7 +18,7 @@ def main() -> None:
     updater = Updater(TELEGRAM_BOT_TOKEN)
     dispatcher = updater.dispatcher
 
-    setup_dispatcher(dispatcher)  # Используйте setup_dispatcher для настройки обработчиков
+    setup_dispatcher(dispatcher)
 
     updater.start_polling()
     updater.idle()

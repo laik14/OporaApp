@@ -1,5 +1,6 @@
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, MessageHandler, Filters
+from bot import ADMINS  # Убедитесь, что этот импорт добавлен
 
 def start(update: Update, context: CallbackContext) -> None:
     # ...existing code...
