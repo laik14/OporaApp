@@ -1,58 +1,81 @@
-/* Общие стили для всех страниц */
+/* Общие стили для всей страницы */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #d6d6d6;
 }
 
+/* Стили для контейнера */
+.container {
+    text-align: center;
+    background-color: #d485ff;
+    padding: 20px;
+    border: thin solid #000;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Заголовок */
 h1 {
     color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Описание под заголовком */
+p {
+    color: #555;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
-p {
-    color: #666;
-    margin-bottom: 20px;
+/* Стили для списка кнопок */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    gap: 15px; /* Расстояние между кнопками */
 }
 
 /* Стили для кнопок */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Стили для ссылок */
-a {
-    color: #4CAF50;
+ul li a {
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    background-color: #ffc018;
+    color: black;
     text-decoration: none;
+    border-radius: 0px;
+    border: 2px solid #000; /* Черный бордер */
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 
+        1px 1px 0px #666,  /* Темная тень снизу */
+        /*-1px -1px 0px #fff; /* Светлая подсветка сверху */
 }
 
-a:hover {
-    text-decoration: underline;
+ul li a:hover {
+    background-color: #d7a419; /* Изменение цвета при наведении */
+    transform: translateY(-2px); /* Эффект подъема */
+    box-shadow: 
+        2px 2px 0px #666,  /* Усиление тени снизу */
+       /* -2px -2px 0px #fff; /* Усиление подсветки сверху */
 }
 
-/* Стили для контейнеров */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+
+
+/* Кнопка Контакты */
+ul li.contacts {
+    grid-column: span 2; /* Растягиваем кнопку на всю ширину двух колонок */
 }

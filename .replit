@@ -1,0 +1,16 @@
+modules = ["web", "python-3.12", "python-3.8"]
+run = "python3 webapp.py"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["python3", "webapp.py"]
+
+[[ports]]
+localPort = 80
+externalPort = 3000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
